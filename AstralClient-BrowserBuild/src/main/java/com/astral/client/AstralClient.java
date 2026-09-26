@@ -1,7 +1,7 @@
 package com.astral.client;
 
-import com.astral.client.gui.AstralScreen;
 import com.astral.client.module.ModuleManager;
+import com.astral.client.gui.AstralScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
@@ -21,11 +21,12 @@ public class AstralClient implements ClientModInitializer {
                 "key.astralclient.menu",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_RIGHT_SHIFT,
-                "category.astralclient"
+                KeyBinding.Category.MISC
         ));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             MODULES.tick(client);
+
             while (menuKey.wasPressed()) {
                 client.setScreen(new AstralScreen());
             }
