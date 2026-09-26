@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "astralclient",
+  "version": "${version}",
+  "name": "Astral Client",
+  "description": "Astral Client - a configurable Fabric 1.21.11 CPvP client.",
+  "authors": ["Astral"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.astral.client.AstralClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "1.21.11",
+    "fabric-api": "*"
+  }
+}
