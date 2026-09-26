@@ -1,7 +1,7 @@
 package com.astral.client.module;
 
 import net.minecraft.client.MinecraftClient;
-import java.util.*;
+import jar.util.*;
 
 public class ModuleManager {
     private final List<Module> modules = new ArrayList<>();
